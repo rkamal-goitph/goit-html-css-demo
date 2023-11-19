@@ -28,10 +28,18 @@ table td {
   color: pink;
 }
 
-header {
+/* header {
   background-color: lightblue;
 }
 
 footer {
   background-color: lightcoral;
 }
+
+.odd {
+  background-color: aliceblue;
+}
+
+.even {
+  background-color: beige;
+} */
