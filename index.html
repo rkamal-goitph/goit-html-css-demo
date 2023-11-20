@@ -3,47 +3,80 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 01 Lesson</title>
+    <link rel="stylesheet" href="./style.css" />
+    <title>Module 02 Lesson 03</title>
   </head>
   <body>
-    <!-- Paragraph tag -->
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque eligendi,
-      a eaque, esse itaque porro non exercitationem odio earum quos perferendis!
-    </p>
+    <!-- Syntax -->
 
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Illo, totam
-      velit asperiores non temporibus ut nisi minima?
-    </p>
+    <!------------------------------------------------------------------ CSS APPROACHES --------------------------------------------------->
 
-    <!-- Heading tag -->
-    <h1>This is a heading tag</h1>
-    <!-- Can be only used once in an HTML document -->
+    <!-- Inline Styles -->
+    <!-- <p style="color: blue; font-size: 24px;">This text will be blue.</p> -->
 
-    <h2>This is a heading tag</h2>
-    <!-- This is used for section title/headings -->
+    <!-- Embedded Styles -->
+    <!-- <head>
+      <style type="text/css">
+        p {
+          color: blue;
+          font-size: 24px;
+        }
+      </style>
+    </head> -->
 
-    <h3>This is a heading tag</h3>
-    <!-- Used for section content title/headings -->
+    <!-- External Styles -->
+    <!-- <head>
+      <link rel="stylesheet" href="./css/styles.css" />
+    </head> -->
 
-    <h4>This is a heading tag</h4>
-    <h5>This is a heading tag</h5>
-    <h6>This is a heading tag</h6>
+    <!------------------------------------------------------------------ SELECTORS --------------------------------------------------->
 
-    <!-- Nested lists -->
-    <ul>
+    <!-- Element Selector -->
+    <!-- <p>Sample paragraph for element selector</p>
+    <a href="/">Sample anchor for element selector</a> -->
+
+    <!-- Class Selector -->
+    <!-- <h1 class="title">Hi, I'm Mango.</h1>
+    <p class="text">
+      Welcome to my personal page. Here you can see
+      <a class="link" href="">the projects.</a>
+    </p> -->
+
+    <!-- Multiple Classes -->
+    <!-- <p class="alert success">Account replenishment completed</p>
+    <p class="alert warning">Attention, the tariffs will be changed</p>
+    <p class="alert error">Transaction Error</p> -->
+
+    <!-- ID Selectors -->
+    <!-- <h1 id="title" class="error">Page title</h1> -->
+
+    <!-- Descendant Selectors -->
+    <!-- <a href="">Read our blog!</a>
+    <ul class="social-links">
+      <li>
+        <a href="">Twitter link is<span class="span">here</span></a>
+      </li>
+      <li>
+        <a href="">Instagram</a>
+      </li>
+      <li>
+        <a href="">Facebook</a>
+      </li>
+    </ul> -->
+
+    <!-- Child Selector -->
+    <!-- <ul class="menu">
       <li>
         Computers and accessories
-        <ul>
+        <ul class="submenu">
           <li>Processors</li>
           <li>Monitors</li>
           <li>Video cards</li>
         </ul>
       </li>
       <li>
-        Home appliances
-        <ul>
+        Appliances
+        <ul class="submenu">
           <li>Refrigerators</li>
           <li>TV sets</li>
           <li>Washing machines</li>
@@ -51,89 +84,108 @@
       </li>
       <li>
         Household products
-        <ul>
+        <ul class="submenu">
           <li>Armchairs</li>
           <li>Mattresses</li>
           <li>Electric fireplaces</li>
         </ul>
       </li>
-    </ul>
+    </ul> -->
 
-    <!-- Anchor Tag -->
+    <!-- Attribute Selector -->
+    <!-- <a href="https://htmlreference.io" title="Tag book"> htmlreference.io </a>
+    <a href="https://cssreference.io" title="Style guide"> cssreference.io </a>
+    <a href="https://www.youtube.com">YouTube </a> -->
 
-    <a href="https://google.com" class="link" target="_blank"
-      >Click here to proceed to Google</a
-    >
-    <a href="https://facebook.com" class="link" target="_blank"
-      >Click here to proceed to Facebook</a
-    >
-    <a href="https://youtube.com" class="link" target="_blank"
-      >Click here to proceed to Youtube</a
-    >
-    <a href="/images/about-01.jpg" class="link" target="_blank" download
-      >Click here to download an image</a
-    >
+    <!------------------------------------------------------------------ STATE PSEUDOCLASSES --------------------------------------------------->
 
-    <!-- Link to phone number -->
-    <a href="tel:+14251234563">+1 (425) 123-45-63</a>
+    <!-- Hover State -->
+    <!-- <p>
+      A good tag <span class="span">cheat</span> sheet can be found
+      <a class="link" href="https://htmlreference.io">here.</a>.
+    </p>
 
-    <!-- Link to email address  -->
-    <a href="mailto:example@mail.ru">example@mail.ru</a>
+    <ul class="social-links">
+      <li><a class="link" href="https://twitter.com">Twitter</a></li>
+      <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
+      <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
+    </ul> -->
 
-    <!-- Button Type -->
-    <button type="button">Button for Call to Action</button>
+    <!-- Focus, Active and Visited States -->
+    <!-- <ul class="social-links">
+      <li>
+        <a class="link" href="https://twitter.com" target="_blank">Twitter</a>
+      </li>
+      <li><a class="link" href="https://www.instagram.com">Instagram</a></li>
+      <li><a class="link" href="https://www.facebook.com">Facebook</a></li>
+      <li><a class="link" href="https://www.snapchat.com">Snapchat</a></li>
+    </ul> -->
 
-    <!-- Submit type -->
-    <button type="submit">Button for Submitting Forms</button>
+    <!------------------------------------------------------------------ COLORS --------------------------------------------------->
 
-    <!-- Image Tags -->
+    <!-- Text Color -->
+    <!-- <p class="text-demo">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+      commodi, veritatis nihil alias iste odit similique sit eius optio veniam,
+      impedit cumque fuga facere labore quo id necessitatibus quaerat rerum.
+    </p> -->
 
-    <!-- Image using relative path -->
-    <img
-      src="./images/about-01.jpg"
-      alt="barber trimming a beard"
-      width="400"
-      height="400"
-    />
-    <!-- Image using absolute path -->
-    <img
-      src="https://miro.medium.com/v2/resize:fit:1400/1*GzSN1FA6gUZBX35nEluUkw.jpeg"
-      alt="barber trimming hair"
-      width="400"
-      height="400"
-    />
+    <!-- Background Color -->
+    <!-- <p class="bg-text">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+      commodi, veritatis nihil alias iste odit similique sit eius optio veniam,
+      impedit cumque fuga facere labore quo id necessitatibus quaerat rerum.
+    </p> -->
 
-    <!-- Clickable Image -->
-    <a href="https://www.pexels.com/photo/animals-sweet-cat-kitty-57416/">
-      <img
-        src="https://images.pexels.com/photos/57416/cat-sweet-kitty-animals-57416.jpeg?w=640"
-        alt="Red cat"
-        width="640"
-      />
-    </a>
+    <!-- Rank 4 Selectors -->
+    <!-- <article>
+      <h1>Lorem ipsum dolor sit amet</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        commodi, veritatis nihil alias iste odit similique sit eius optio
+        veniam, impedit cumque fuga facere labore quo id necessitatibus quaerat
+        rerum.
+      </p>
+      <a href="">Read more...</a> -->
 
-    <!-- Images With Caption -->
-    <figure>
-      <!-- Any graphic content: photography, graphics, diagrams, etc. -->
-      <img
-        src="https://miro.medium.com/v2/resize:fit:1400/1*GzSN1FA6gUZBX35nEluUkw.jpeg"
-        alt="barber trimming hair"
-        width="400"
-        height="400"
-      />
-      <figcaption>Explanatory text under the image</figcaption>
-    </figure>
+    <!-- Rank 3 Selectors -->
+    <!-- <article class="post">
+      <h1 class="post-title">Lorem ipsum dolor sit amet</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        commodi, veritatis nihil alias iste odit similique sit eius optio
+        veniam, impedit cumque fuga facere labore quo id necessitatibus quaerat
+        rerum.
+      </p>
+      <a href="" class="post-link">Read more...</a>
+    </article>
+    </article> -->
 
-    <!-- Sectioning -->
-    <header>
-      <nav></nav>
-    </header>
-    <main>
-      <section></section>
-      <section></section>
-      <section></section>
-      <section></section>
-    </main>
-    <footer></footer>
+    <!-- Rank 2 Selectors -->
+    <!-- <article class="post">
+      <h1 class="post-title-heading" id="title">Lorem ipsum dolor sit amet</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+        commodi, veritatis nihil alias iste odit similique sit eius optio
+        veniam, impedit cumque fuga facere labore quo id necessitatibus quaerat
+        rerum.
+      </p>
+      <a href="" class="post-link">Read more...</a>
+    </article> -->
+
+    <!-- Rank 1 Selectors -->
+    <!-- Specificity of this style - 1 0 0 0 -->
+    <!-- <p class="post-title-heading" style="color: indigo">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+      commodi, veritatis nihil alias iste odit similique sit eius optio veniam,
+      impedit cumque fuga facere labore quo id necessitatibus quaerat rerum.
+    </p> -->
+
+    <!-- !important Keyword -->
+    <p class="text" id="text-id" style="color: indigo">
+      Lorem, ipsum dolor sit amet consectetur adipisicing elit. Obcaecati
+      commodi, veritatis nihil alias iste odit similique sit eius optio veniam,
+      impedit cumque fuga facere labore quo id necessitatibus quaerat rerum.
+    </p>
   </body>
 </html>

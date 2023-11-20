@@ -1,0 +1,272 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  /* padding: 10px; */
+  font-size: 12px;
+}
+
+/* ================================Element Selectors */
+
+/* It applies to all paragraphs on the page */
+/* p {
+  font-size: 24px;
+} 
+/* a {
+  text-decoration: none;
+} */
+
+/* ================================Class Selectors */
+
+/* Applies to all class tags title */
+.title {
+  font-weight: 500;
+}
+
+/* Applies to all class tags text */
+.text {
+  color: brown;
+  font-size: 18px;
+}
+
+/* Applies to all class tags link */
+.link {
+  text-decoration: none;
+}
+
+/* ================================Multiple Classes */
+
+/* Common styles for all types of notifications */
+.alert {
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* Specific styles for each type */
+.success {
+  color: green;
+}
+
+.warning {
+  color: orange;
+}
+
+.error {
+  color: red;
+}
+
+/* ================================ID Selectors */
+
+/* #title {
+  font-weight: 500;
+  color: orange;
+} */
+
+/* ================================Descendant Selectors */
+
+/* ❌ It applies to all links in the document */
+a {
+  color: blue;
+  text-decoration: none;
+}
+
+/* ✅ It applies only to links that are inside a class tag social-links */
+/* .social-links a {
+  color: maroon;
+  text-decoration: none;
+} */
+
+.social-links a span {
+  color: green;
+  text-decoration: none;
+}
+
+/* ================================Child Selectors */
+
+/* ❌ Doesn't solve the problem */
+.menu li {
+  border: 1px solid green;
+}
+
+/* ✅ That's exactly what you need  */
+.menu > li {
+  border: 1px solid crimson;
+}
+
+/* ================================Attribute Selectors */
+/* Syntax */
+/* element[attribute]  */
+
+a[title] {
+  color: teal;
+}
+
+/* element[attribute="value"] */
+
+/* Unusual curly brace formatting is ok */
+a[href="https://htmlreference.io"]
+{
+  color: teal;
+}
+
+a[href="https://cssreference.io"]
+{
+  color: orange;
+}
+
+a[href="https://www.youtube.com"]
+{
+  color: tomato;
+}
+
+/* ================================Hover States */
+
+.link {
+  color: teal;
+}
+
+.link:hover {
+  color: cornflowerblue;
+}
+
+.span:hover {
+  color: crimson;
+}
+
+.social-links .link {
+  color: pink;
+}
+
+.social-links .link:hover {
+  color: maroon;
+}
+
+/* ================================Focus States */
+
+.social-links .link {
+  color: teal;
+}
+
+.social-links .link:focus {
+  color: orange;
+}
+
+/* ================================Active States */
+
+/* .social-links .link {
+  color: teal;
+} */
+
+/* .social-links .link:hover,
+.social-links .link:focus {
+  color: orange;
+} */
+
+.social-links .link:active {
+  color: yellow;
+}
+
+/* Heirarchy of Events */
+/* 1. Hover State */
+/* 2. Active State */
+/* 3. Focus State */
+
+/* ================================Visited States */
+
+.social-links .link:visited {
+  color: green;
+}
+
+/* ================================Text Color */
+
+.text {
+  color: tomato;
+}
+
+/* ================================Background Color */
+
+.bg-text {
+  background-color: tomato;
+  color: white;
+}
+
+/* ================================Color Transparency */
+
+/* Pure red with 30% transparency */
+.text-demo {
+  background-color: rgb(255, 0, 0);
+}
+
+/* Pure red with 30% transparency */
+.text-demo {
+  background-color: rgba(100%, 0%, 0%, 50%);
+  background-color: #ff0000aa;
+}
+
+/* ================================Rank 4 Selectors Specificity */
+
+/* Specificity - 0 0 0 1 */
+/* p {
+  color: green;
+} */
+
+/* ✅ Specificity - 0 0 0 2 */
+/* article > p {
+  color: orange;
+} */
+
+/* ================================Rank 3 Selectors Specificity */
+
+/* Specificity - 0 0 1 0 */
+/* .post-title {
+  color: green;
+} */
+
+/* Specificity - 0 0 1 1 */
+/* .post > h1 {
+  color: red;
+} */
+
+/* ✅ Specificity - 0 0 2 0 */
+/* .post > .post-title {
+  color: orange;
+} */
+
+/* Specificity - 0 0 0 1 */
+a {
+  color: green;
+}
+
+/* Specificity - 0 0 1 0 */
+.post-link {
+  color: orange;
+}
+
+/* Specificity - 0 0 1 1 */
+a.post-link {
+  color: blue;
+}
+
+/* Specificity - 0 0 2 0 */
+/* .post > .post-link {
+  color: red;
+} */
+
+/* ✅ Specificity - 0 0 2 1 */
+/* .post > a.post-link {
+  color: brown;
+} */
+
+/* ================================Rank 2 Selectors Specificity */
+
+/* Specificity - 0 0 1 0 */
+.post-title-heading {
+  color: green;
+}
+
+/* ✅ Specificity - 0 1 0 0 */
+#title {
+  color: orange;
+}
+
+p {
+  color: aquamarine;
+}
