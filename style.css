@@ -1,0 +1,113 @@
+/* 1. Apply class names to all elements using the parent name - child name convention */
+/* 2. Import Font Family from Google Fonts service */
+/* 3. Reset browser style sheets */
+/* 4. Declare colors as variables */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+/* address {
+  font-style: normal;
+} */
+
+:root {
+  --orange: #ff6c00;
+  --dark-gray: #303030;
+  --white: #ffffff;
+  --light-gray: #9da4bd;
+  --medium-gray: #555555;
+  --black: #000000;
+
+  --raleway: 'Raleway', sans-serif;
+  --open-sans: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: var(--open-sans);
+}
+
+/* Button does not automatically inherit font family from body selector */
+
+button {
+  border-radius: 25px;
+  border: 1px solid var(--orange);
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.header {
+  background-color: beige;
+}
+
+.nav-item-link {
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.nav-item-link:hover,
+.address-item-link:hover,
+.hero-item-link:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.address-item-link {
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.header-button {
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+}
+
+.hero {
+  background-color: antiquewhite;
+}
+
+.hero-eyebrow {
+  color: rgba(157, 164, 189, 0.6);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.hero-heading {
+  color: var(--white);
+  font-family: var(--raleway);
+  font-size: 72px;
+  letter-spacing: 3.6px;
+}
+
+.hero-paragraph {
+  color: var(--light-gray);
+  font-size: 18px;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: 0.36px;
+}
+
+.hero-item-link {
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+}
