@@ -1,4 +1,323 @@
+/* 1. Apply class names to all elements using the parent name - child name convention */
+/* 2. Import Font Family from Google Fonts service */
+/* 3. Reset browser style sheets */
+/* 4. Declare colors as variables */
+
 * {
   margin: 0;
   padding: 0;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+address {
+  font-style: normal;
+}
+
+:root {
+  --orange: #ff6c00;
+  --dark-gray: #303030;
+  --white: #ffffff;
+  --light-gray: #9da4bd;
+  --medium-gray: #555555;
+  --black: #000000;
+
+  --raleway: 'Raleway', sans-serif;
+  --open-sans: 'Open Sans', sans-serif;
+}
+
+body {
+  font-family: var(--open-sans);
+}
+
+/* Button does not automatically inherit font family from body selector */
+
+button {
+  border-radius: 25px;
+  border: 1px solid var(--orange);
+  background-color: transparent;
+  font-family: inherit;
+}
+
+.nav-item-link {
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+}
+
+.nav-item-link:hover,
+.address-item-link:hover,
+.hero-item-link:hover {
+  color: var(--orange);
+  cursor: pointer;
+}
+
+.address-item-link {
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.header-button {
+  color: var(--white);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+}
+
+/* This style is not part of the Figma design, I just added it for the white texts to be visible */
+
+.header,
+.hero,
+.about,
+.services,
+.awards,
+.members,
+.gallery,
+.contacts {
+  background-color: antiquewhite;
+}
+
+/* HERO SECTION */
+
+.hero-eyebrow {
+  color: rgba(157, 164, 189, 0.6);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+/* We don't include the font-weight because 700 is default for h1-h6 tags */
+/* We don't include font-weight 400 because that is default for p, button, a tags */
+/* We also omit line-height: normal and font-style: normal values */
+/* We don't declare the family if it's value is Open Sans because we already declared that in the body tag */
+
+.hero-heading {
+  color: var(--white);
+  font-family: var(--raleway);
+  font-size: 72px;
+  letter-spacing: 3.6px;
+}
+
+.hero-paragraph {
+  color: var(--light-gray);
+  font-size: 18px;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: 0.36px;
+}
+
+.hero-item-link {
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+}
+
+/* ABOUT SECTION */
+
+.about-eyebrow {
+  color: var(--dark-gray);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.about-heading {
+  color: var(--dark-gray);
+  font-family: var(--raleway);
+  font-size: 42px;
+  letter-spacing: 2.1px;
+}
+
+.about-description {
+  color: var(--medium-gray);
+  font-size: 18px;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: 0.36px;
+}
+
+.about-sub-description {
+  color: var(--medium-gray);
+  font-size: 14px;
+  line-height: 26px; /* 185.714% */
+  letter-spacing: 0.28px;
+}
+
+.about-button {
+  border-radius: 25px;
+  border: 1px solid var(--orange);
+
+  color: var(--dark-gray);
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+}
+
+/* SERVICES SECTION */
+
+.services-eyebrow {
+  color: rgba(157, 164, 189, 0.6);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.services-heading {
+  color: var(--white);
+  font-size: 42px;
+  letter-spacing: 2.1px;
+}
+
+.services-item {
+  color: var(--light-gray);
+  font-size: 18px;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: 0.36px;
+}
+
+.services-button {
+  border-radius: 25px;
+  border: 1px solid var(--orange);
+  color: var(--white);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+}
+
+/* I declared the eyebrow element styles collectively because they share the same design */
+
+.awards-eyebrow,
+.members-eyebrow,
+.gallery-eyebrow {
+  color: var(--dark-gray);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+/* AWARDS SECTION */
+
+.awards-heading {
+  color: var(--dark-gray);
+  font-family: var(--raleway);
+  font-size: 42px;
+  letter-spacing: 2.1px;
+}
+
+.awards-description {
+  color: var(--medium-gray);
+  font-size: 18px;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: 0.36px;
+}
+
+.awards-item-title {
+  color: var(--dark-gray);
+  text-align: center;
+  font-size: 42px;
+  letter-spacing: 2.1px;
+}
+
+.awards-item-paragraph {
+  color: var(--dark-gray);
+  text-align: center;
+  font-size: 11px;
+  font-weight: 600;
+}
+
+/* MEMBERS SECTION */
+
+.members-heading {
+  color: var(--dark-gray);
+  font-family: Raleway;
+  font-size: 42px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.1px;
+}
+
+.members-item-title {
+  color: var(--dark-gray);
+  text-align: center;
+  font-size: 18px;
+  letter-spacing: 0.36px;
+}
+
+.members-item-description {
+  color: var(--orange);
+  text-align: center;
+  font-size: 14px;
+  letter-spacing: 0.28px;
+}
+
+/* CONTACTS SECTION */
+
+.contacts-heading {
+  color: var(--white);
+  font-family: var(--raleway);
+  font-size: 42px;
+  letter-spacing: 2.1px;
+}
+
+/* I declared both .contacts-item and .contacts-item-link here because the element containing the location address which is the first LI is not an anchor tag */
+/* On the succeeding LI tags, we need to set it to .contacts-item-link since it is the child most element */
+.contacts-item,
+.contacts-item-link {
+  color: var(--light-gray);
+  font-size: 18px;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: 0.36px;
+}
+
+.contacts-description-title {
+  color: var(--white);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.contacts-description-body {
+  color: var(--light-gray);
+  font-size: 18px;
+  line-height: 30px; /* 166.667% */
+  letter-spacing: 0.36px;
+}
+
+/* FOOTER SECTION */
+
+.footer-copyright {
+  color: var(--light-gray);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+}
+
+.footer-item-link {
+  color: var(--dark-gray);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 2.2px;
+}
+
+.footer-item-link:hover {
+  color: var(--orange);
 }
