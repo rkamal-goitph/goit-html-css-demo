@@ -1,4 +1,176 @@
-* {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.text {
+  border: 2px dashed #2196f3;
+  padding: 15px;
+  margin: 20px;
+}
+
+/* WIDTH AND HEIGHT */
+/* Width and height can take em, rem, px and percentage values */
+
+/* PADDINGS AND MARGIN */
+
+.box {
+  width: 150px;
+  height: 150px;
+
+  /* border: 5px solid #f44336; */
+  background-color: #ffeb3b;
+
+  /* APPROACH 1 - 4 values */
+  padding: 10px 20px 30px 40px;
+  margin: 10px 20px 30px 40px;
+
+  /* APPROACH 2 - 3 values */
+  padding: 10px 20px 30px;
+  margin: 10px 20px 30px;
+
+  /* APPROACH 3 - 2 values */
+  padding: 10px 20px;
+  margin: 10px 20px;
+
+  /* CASE WHERE LEFT AND RIGHT VALUES ARE ONLY GIVEN */
+  margin: 0 20px;
+
+  /* CASE WHERE TOP AND BOTTOM VALUES ARE ONLY GIVEN */
+  margin: 20px 0;
+
+  /* APPROACH 4 - individual values */
+  padding-top: 10px;
+  padding-right: 20px;
+}
+
+/* BORDERS */
+
+.box-individual {
+  /* APPROACH 1 - general declaration */
+  border: 3px solid blue;
+
+  /* APPROACH 2 - inidivual but grouped declaration */
+  border-top: 3px solid blue;
+
+  /* APPROACH 3 - individual values */
+  /* Sets top border styles */
+  border-top-width: 3px;
+  border-top-style: solid;
+  border-top-color: blue;
+
+  /* Sets right border styles */
+  border-right-width: 5px;
+  border-right-style: dotted;
+  border-right-color: black;
+
+  /* Sets bottom border styles */
+  border-bottom-width: 7px;
+  border-bottom-style: dashed;
+  border-bottom-color: palevioletred;
+
+  /* Sets left border styles */
+  border-left-width: 9px;
+  border-left-style: dashed;
+  border-left-color: green;
+}
+
+body {
+  padding: 10px;
+  gap: 10px;
+}
+
+/* BORDER RADIUS */
+
+.box-1 {
+  width: 140px;
+  height: 80px;
+  border-radius: 10px;
+  background-color: #f44336;
+}
+
+.box-2 {
+  width: 100px;
+  height: 100px;
+  border-radius: 20%;
+  background-color: #2196f3;
+}
+
+.box-3 {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background-color: #4caf50;
+}
+
+/* LONGHAND VERSION SYNTAX */
+
+/* top left corner */
+/* border-top-left-radius: value; */
+
+/* top right corner */
+/* border-top-right-radius: value; */
+
+/* bottom right corner */
+/* border-bottom-right-radius: value; */
+
+/* bottom left corner */
+/* border-bottom-left-radius: value; */
+body {
+  height: 1000px;
+}
+
+.box {
+  width: 240px;
+  height: 80px;
+
+  margin: auto 0;
+}
+
+.indigo {
+  background-color: #3f51b5;
+  padding: 10px;
+}
+
+.green {
+  background-color: #4caf50;
+}
+
+.amber {
+  background-color: #ffc107;
+}
+
+/* CENTERING A BLOCK ELEMENT */
+/* margin: 0 auto; 
+this style delaration will take up as much possible space within the left and right side  of the element
+*/
+
+/* Parent to child element - always use padding */
+/* Adjacent sibling elements - always use margin */
+
+/* .list-item:nth-child(even) {
+  color: red;
+}
+
+.list-item:nth-child(odd) {
+  color: green;
+} */
+
+.list-item:nth-child(2n) {
+  color: red;
+}
+
+.list-item:nth-child(2n + 1) {
+  color: green;
+}
+
+.list-item:nth-child(3n) {
+  color: purple;
 }
