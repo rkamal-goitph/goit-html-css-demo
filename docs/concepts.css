@@ -1,0 +1,136 @@
+/* ===================== KEY CONCEPTS =================== */
+/* Reset some default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Apply styles to the container and boxes */
+.container {
+  display: flex; /* Use flexbox */
+  /* flex-direction: column; */
+  background-color: #f0f0f0;
+  padding: 20px;
+}
+
+.items {
+  flex: 1; /* Grow and shrink equally to distribute space */
+  padding: 10px;
+  border: 1px solid #ccc;
+  background-color: #fff;
+}
+
+/* ===================== DISPLAY PROPERTIES =================== */
+.menu {
+  padding: 10px;
+  margin: 0;
+  list-style: none;
+  border-radius: 4px;
+  background-color: #2196f3;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+
+  /*  Making ul.menu a Flex container  */
+  display: flex;
+}
+
+.menu .link {
+  display: block;
+  padding: 10px;
+  border-radius: 4px;
+  text-decoration: none;
+  color: black;
+  background-color: #fff;
+}
+
+.menu .link:hover {
+  text-decoration: underline;
+}
+
+/* ===================== HEADER APPLICATION =================== */
+
+.page-header {
+  /*  Making header.page-header a Flex-container and aligning elements  */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  background-color: #607d8b;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.logo {
+  padding: 15px;
+  border-radius: 4px;
+  background-color: #ff5722;
+  text-decoration: none;
+  color: #fff;
+}
+
+/* ===================== IMAGE CARD APPLICATION =================== */
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.card {
+  display: flex;
+  gap: 10px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.card.flex-start-aligned {
+  align-items: flex-start;
+}
+
+.card + .card {
+  margin-top: 20px;
+}
+
+/* ===================== IMAGE CARD APPLICATION =================== */
+
+.container {
+  max-width: 1200px;
+  padding: 5px;
+  /* margin-left: auto; */
+  margin-right: auto;
+  height: 100vh;
+}
+
+.card-set {
+  display: flex;
+  /* Make a flex container multiline */
+  flex-wrap: wrap;
+  /* Set gap between rows and columns */
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+}
+
+.item {
+  /*  Set the width of the elements  */
+  flex-basis: calc((100% - 20px) / 3);
+
+  padding: 10px;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0px 2px 1px -1px rgba(0, 0, 0, 0.2),
+    0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 1px 3px 0px rgba(0, 0, 0, 0.12);
+}
+
+.item h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.item p {
+  margin: 0;
+}
