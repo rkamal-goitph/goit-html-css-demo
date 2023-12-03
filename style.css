@@ -40,6 +40,7 @@ section {
   --medium-gray: #555555;
   --black: #000000;
   --ash: #f7f7f7;
+  --dark-ash: #191c26;
 
   --raleway: 'Raleway', sans-serif;
   --open-sans: 'Open Sans', sans-serif;
@@ -492,7 +493,11 @@ button {
   color: var(--white);
 }
 
-/* ================== ABOUT SECTION ================= */
+/* ================== AWARDS SECTION ================= */
+
+.awards {
+  background-color: var(--white);
+}
 
 .awards-container {
   display: flex;
@@ -523,4 +528,94 @@ button {
 .awards-eyebrow,
 .awards-heading {
   margin-bottom: 20px;
+}
+
+/* ================== MEMBERS SECTION ================= */
+
+.members {
+  background-color: var(--ash);
+}
+
+.members-eyebrow {
+  display: block;
+  margin-bottom: 20px;
+}
+
+.members-heading {
+  margin-bottom: 44px;
+}
+
+.members-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.members-item-image {
+  display: block; /* We need this to apply margin bottom */
+  margin-bottom: 30px;
+}
+
+.members-item-title {
+  margin-bottom: 8px;
+}
+
+/* ================== GALLERY SECTION ================= */
+
+.gallery {
+  background-color: var(--white);
+}
+
+.gallery-eyebrow {
+  display: flex;
+  margin-bottom: 44px;
+}
+
+.gallery-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ================== CONTACTS SECTION ================= */
+
+.contacts {
+  background-color: var(--dark-ash);
+}
+
+.contacts-heading {
+  margin-bottom: 40px;
+}
+
+.contacts-item {
+  margin-bottom: 20px;
+}
+
+.contacts-item:last-child {
+  margin-bottom: 0;
+}
+
+.contacts-list {
+  margin-bottom: 70px;
+}
+
+.contacts-description-title {
+  display: block;
+  margin-bottom: 20px;
+}
+
+/* ================== FOOTER SECTION ================= */
+
+.footer {
+  padding: 56px 0;
+}
+
+.footer-container {
+  display: flex;
+}
+
+.footer-list {
+  margin-left: auto;
+  display: flex;
+  justify-content: flex-end;
+  gap: 40px; /* used to set gap between flex items */
+  /* Achieves the same effect as the use of .footer-item { margin-right: 40px } and .footer-item:last-child { margin-right: 0 } */
 }
