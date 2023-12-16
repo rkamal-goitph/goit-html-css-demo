@@ -91,8 +91,6 @@ button {
 
 /* This style is not part of the Figma design, I just added it for the white texts to be visible */
 
-.header,
-.hero,
 .about,
 .services,
 .awards,
@@ -375,7 +373,6 @@ button {
 }
 
 .header {
-  background-color: var(--light-gray);
   padding: 32px 0;
 }
 
@@ -390,14 +387,26 @@ button {
 
 /* ================== HERO SECTION ================= */
 .hero {
+  position: relative;
+  padding: calc(206px - 80px) 0 186px;
+}
+
+.hero-backdrop {
   background-image: url(./images/hero-background.jpg),
     linear-gradient(rgba(25, 28, 38, 0.2), rgba(25, 28, 38, 0.2));
   background-repeat: no-repeat;
   background-position: center;
   background-size: 1125px 680px, cover;
   background-color: unset;
-  padding: 206px 0;
+  width: 1125px;
+  height: 680px;
+  position: absolute;
+  top: -124px;
+  left: calc(50% + 75px);
+  transform: translateX(-50%);
+  z-index: -1;
 }
+
 .hero-container {
   display: flex;
   flex-direction: row-reverse;
@@ -406,9 +415,10 @@ button {
 
 .hero-list {
   display: flex;
-  writing-mode: vertical-rl;
-  margin-right: 158px;
-  rotate: 180deg;
+  margin-right: 58px;
+  rotate: 270deg;
+  position: relative;
+  padding-bottom: 100px;
 }
 
 .hero-list::before {
@@ -417,12 +427,21 @@ button {
   width: 1px;
   height: 60px;
   background-color: var(--dark-gray);
+  position: absolute;
+  left: -90px;
+  top: -20px;
+  transform: rotate(90deg);
+}
+
+.hero-eyebrow {
+  margin-left: 80px;
 }
 
 .hero-eyebrow,
 .hero-heading {
   display: block;
   margin-bottom: 20px;
+  position: relative;
 }
 
 .hero-eyebrow::before {
@@ -430,13 +449,16 @@ button {
   display: inline-block;
   width: 1px;
   height: 60px;
-  transform: rotate(90deg);
   flex-shrink: 0;
   background: rgba(157, 164, 189, 0.6);
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
 }
 
 .hero-item:first-child {
-  margin-bottom: 40px;
+  margin-right: 40px;
 }
 
 .hero-item-link {
@@ -465,6 +487,8 @@ button {
 
 .about-eyebrow {
   display: block;
+  margin-left: 80px;
+  position: relative;
 }
 
 .about-eyebrow::before {
@@ -472,9 +496,12 @@ button {
   display: inline-block;
   width: 1px;
   height: 60px;
-  transform: rotate(90deg);
   flex-shrink: 0;
   background: var(--dark-gray);
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
 }
 
 .about-eyebrow,
@@ -518,6 +545,8 @@ button {
 .services-eyebrow {
   display: block;
   margin-bottom: 20px;
+  margin-left: 80px;
+  position: relative;
 }
 
 .services-eyebrow::before {
@@ -525,19 +554,12 @@ button {
   display: inline-block;
   width: 1px;
   height: 60px;
-  transform: rotate(90deg);
-  flex-shrink: 0;
-  background: var(--dark-gray);
-}
-
-.services-eyebrow::before {
-  content: '';
-  display: inline-block;
-  width: 1px;
-  height: 60px;
-  transform: rotate(90deg);
   flex-shrink: 0;
   background: rgba(157, 164, 189, 0.6);
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
 }
 
 .services-heading {
@@ -566,11 +588,13 @@ button {
 .services-item {
   display: flex;
   justify-content: space-between;
+  align-items: baseline;
 }
 
 .services-item-bar {
-  width: auto;
+  background-color: rgba(157, 164, 189, 0.12);
   height: 1px;
+  flex: 1;
 }
 
 .services-list:first-child {
@@ -600,13 +624,17 @@ button {
   padding: 20px 24px;
 }
 
+.awards-item-title {
+  position: relative;
+}
+
 .awards-item-title::after {
   content: '+';
-  /* display: block; */
   text-align: center;
   font-size: 16px;
   font-weight: 600;
   color: var(--orange);
+  position: absolute;
 }
 .awards-list {
   width: 372px;
@@ -620,6 +648,8 @@ button {
 
 .awards-eyebrow {
   display: block;
+  margin-left: 80px;
+  position: relative;
 }
 
 .awards-eyebrow::before,
@@ -632,6 +662,10 @@ button {
   transform: rotate(90deg);
   flex-shrink: 0;
   background: var(--dark-gray);
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
 }
 
 .awards-eyebrow,
@@ -648,6 +682,8 @@ button {
 .members-eyebrow {
   display: block;
   margin-bottom: 20px;
+  margin-left: 80px;
+  position: relative;
 }
 
 .members-heading {
@@ -711,6 +747,8 @@ button {
 .gallery-eyebrow {
   display: flex;
   margin-bottom: 44px;
+  margin-left: 80px;
+  position: relative;
 }
 
 .gallery-list {
@@ -737,6 +775,14 @@ button {
 
 .contacts-item {
   margin-bottom: 20px;
+  display: flex;
+  gap: 20px;
+}
+
+.contacts-item-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
 }
 
 .contacts-item:last-child {
@@ -750,6 +796,21 @@ button {
 .contacts-description-title {
   display: block;
   margin-bottom: 20px;
+  margin-left: 80px;
+  position: relative;
+}
+
+.contacts-description-title::before {
+  content: '';
+  display: inline-block;
+  width: 1px;
+  height: 60px;
+  flex-shrink: 0;
+  background: rgba(157, 164, 189, 0.6);
+  position: absolute;
+  left: -50px;
+  top: 50%;
+  transform: translateY(-50%) rotate(90deg);
 }
 
 /* ================== FOOTER SECTION ================= */

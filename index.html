@@ -55,6 +55,7 @@
     <main>
       <!-- Hero section -->
       <section class="hero">
+        <div class="hero-backdrop"></div>
         <div class="container hero-container">
           <div>
             <span class="hero-eyebrow">A hair salon for men in Kyiv</span>
@@ -139,62 +140,46 @@
             <ul class="services-list">
               <li class="services-item">
                 <span class="services-item-name">Men's Haircut</span>
-                <svg class="services-item-bar">
-                  <use href="./icons/sprite.svg#services-item-bar-1"></use>
-                </svg>
+                <div class="services-item-bar"></div>
                 <span class="services-item-price">from 300 UAH</span>
               </li>
               <li class="services-item">
                 <span class="services-item-name">Beard Trim</span>
-                <svg class="services-item-bar">
-                  <use href="./icons/sprite.svg#services-item-bar-2"></use>
-                </svg>
+                <div class="services-item-bar"></div>
                 <span class="services-item-price">from 200 UAH</span>
               </li>
               <li class="services-item">
                 <span class="services-item-name">Mustache Trim</span>
-                <svg class="services-item-bar">
-                  <use href="./icons/sprite.svg#services-item-bar-3"></use>
-                </svg>
+                <div class="services-item-bar"></div>
                 <span class="services-item-price">from 200 UAH</span>
               </li>
               <li class="services-item">
                 <span class="services-item-name">Straight Razor Shave</span>
-                <svg class="services-item-bar">
-                  <use href="./icons/sprite.svg#services-item-bar-4"></use>
-                </svg>
+                <div class="services-item-bar"></div>
                 <span class="services-item-price">from 200 UAH</span>
               </li>
             </ul>
             <ul class="services-list">
               <li class="services-item">
                 <span class="services-item-name">Trainee Haircut</span>
-                <svg class="services-item-bar">
-                  <use href="./icons/sprite.svg#services-item-bar-5"></use>
-                </svg>
+                <div class="services-item-bar"></div>
                 <span class="services-item-price">from 50 UAH</span>
               </li>
               <li class="services-item">
                 <span class="services-item-name">Buzz Cut</span>
-                <svg class="services-item-bar">
-                  <use href="./icons/sprite.svg#services-item-bar-6"></use>
-                </svg>
+                <div class="services-item-bar"></div>
                 <span class="services-item-price">from 200 UAH</span>
               </li>
               <li class="services-item">
                 <span class="services-item-name"
                   >Kids Haircut (&lt;12 y.o.)</span
                 >
-                <svg class="services-item-bar">
-                  <use href="./icons/sprite.svg#services-item-bar-7"></use>
-                </svg>
+                <div class="services-item-bar"></div>
                 <span class="services-item-price">from 300 UAH</span>
               </li>
               <li class="services-item">
                 <span class="services-item-name">Gray Coverage</span>
-                <svg class="services-item-bar">
-                  <use href="./icons/sprite.svg#services-item-bar-8"></use>
-                </svg>
+                <div class="services-item-bar"></div>
                 <span class="services-item-price">from 200 UAH</span>
               </li>
             </ul>
@@ -416,13 +401,27 @@
           <h2 class="contacts-heading">Contacts</h2>
           <address class="contacts-address">
             <ul class="contacts-list">
-              <li class="contacts-item">Main Street, 7A Kyiv, 08132</li>
               <li class="contacts-item">
+                <svg class="contacts-item-icon">
+                  <use href="./icons/sprite.svg#location" />
+                </svg>
+                <span class="contacts-item-link"
+                  >Main Street, 7A <br />
+                  Kyiv, 08132</span
+                >
+              </li>
+              <li class="contacts-item">
+                <svg class="contacts-item-icon">
+                  <use href="./icons/sprite.svg#phone" />
+                </svg>
                 <a class="contacts-item-link" href="tel:+380441111111"
                   >+38 044 111 11 11</a
                 >
               </li>
               <li class="contacts-item">
+                <svg class="contacts-item-icon">
+                  <use href="./icons/sprite.svg#mail" />
+                </svg>
                 <a
                   class="contacts-item-link"
                   href="mailto:+barbershop@email.com"
