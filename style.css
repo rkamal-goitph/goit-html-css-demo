@@ -64,6 +64,7 @@ button {
   font-size: 12px;
   font-weight: 600;
   letter-spacing: 1.2px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .nav-item-link:hover,
@@ -79,6 +80,7 @@ button {
   font-weight: 600;
   letter-spacing: 1.2px;
   text-transform: uppercase;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-button {
@@ -134,6 +136,7 @@ button {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 2.2px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* ABOUT SECTION */
@@ -328,6 +331,7 @@ button {
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 2.2px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .footer-item-link:hover {
@@ -378,6 +382,8 @@ button {
 
 .header-button {
   padding: 12px 25px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-button:hover {
@@ -516,6 +522,8 @@ button {
 
 .about-button {
   padding: 12px 25px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .about-button:hover {
@@ -569,10 +577,9 @@ button {
 .services-button {
   display: block;
   margin: 0 auto;
-}
-
-.services-button {
   padding: 12px 25px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .services-button:hover {
@@ -722,6 +729,7 @@ button {
   height: 44px;
   padding: 12px;
   color: var(--black);
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .members-social-link:hover {
