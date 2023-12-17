@@ -397,43 +397,70 @@
 
       <!-- Contacts Section -->
       <section class="contacts">
-        <div class="container">
-          <h2 class="contacts-heading">Contacts</h2>
-          <address class="contacts-address">
-            <ul class="contacts-list">
-              <li class="contacts-item">
-                <svg class="contacts-item-icon">
-                  <use href="./icons/sprite.svg#location" />
-                </svg>
-                <span class="contacts-item-link"
-                  >Main Street, 7A <br />
-                  Kyiv, 08132</span
-                >
-              </li>
-              <li class="contacts-item">
-                <svg class="contacts-item-icon">
-                  <use href="./icons/sprite.svg#phone" />
-                </svg>
-                <a class="contacts-item-link" href="tel:+380441111111"
-                  >+38 044 111 11 11</a
-                >
-              </li>
-              <li class="contacts-item">
-                <svg class="contacts-item-icon">
-                  <use href="./icons/sprite.svg#mail" />
-                </svg>
-                <a
-                  class="contacts-item-link"
-                  href="mailto:+barbershop@email.com"
-                  >barbershop@email.com</a
-                >
-              </li>
-            </ul>
-          </address>
-          <span class="contacts-description-title">working hours</span>
-          <p class="contacts-description-body">
-            Daily from 9:00 AM till 22:00 PM
-          </p>
+        <div class="container contacts-container">
+          <div class="contacts-form-container">
+            <h2 class="contacts-form-heading">Book a Service</h2>
+            <form action="" class="contacts-form">
+              <label for="" class="contacts-label">
+                <span class="contacts-input-name">Name</span>
+                <input type="text" class="contacts-input" />
+              </label>
+              <label for="" class="contacts-label">
+                <span class="contacts-input-name">Telephone</span>
+                <input type="tel" class="contacts-input" />
+              </label>
+              <label for="" class="contacts-label">
+                <span class="contacts-input-name">Message</span>
+                <textarea
+                  name="message"
+                  id=""
+                  cols="30"
+                  rows="10"
+                  class="contacts-textarea"
+                ></textarea>
+              </label>
+              <button class="contacts-form-button" type="submit">Send</button>
+            </form>
+          </div>
+          <div class="contacts-details">
+            <div class="contacts-details-backdrop"></div>
+            <h2 class="contacts-heading">Contacts</h2>
+            <address class="contacts-address">
+              <ul class="contacts-list">
+                <li class="contacts-item">
+                  <svg class="contacts-item-icon">
+                    <use href="./icons/sprite.svg#location" />
+                  </svg>
+                  <span class="contacts-item-link"
+                    >Main Street, 7A <br />
+                    Kyiv, 08132</span
+                  >
+                </li>
+                <li class="contacts-item">
+                  <svg class="contacts-item-icon">
+                    <use href="./icons/sprite.svg#phone" />
+                  </svg>
+                  <a class="contacts-item-link" href="tel:+380441111111"
+                    >+38 044 111 11 11</a
+                  >
+                </li>
+                <li class="contacts-item">
+                  <svg class="contacts-item-icon">
+                    <use href="./icons/sprite.svg#mail" />
+                  </svg>
+                  <a
+                    class="contacts-item-link"
+                    href="mailto:+barbershop@email.com"
+                    >barbershop@email.com</a
+                  >
+                </li>
+              </ul>
+            </address>
+            <span class="contacts-description-title">working hours</span>
+            <p class="contacts-description-body">
+              Daily from 9:00 AM till 22:00 PM
+            </p>
+          </div>
         </div>
       </section>
     </main>

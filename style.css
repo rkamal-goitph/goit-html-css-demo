@@ -97,8 +97,7 @@ button {
 .services,
 .awards,
 .members,
-.gallery,
-.contacts {
+.gallery {
   background-color: antiquewhite;
 }
 
@@ -767,14 +766,118 @@ button {
 /* ================== CONTACTS SECTION ================= */
 
 .contacts {
+  position: relative;
   background-color: var(--dark-ash);
+  padding: 0;
+}
+
+.contacts-container {
+  display: flex;
+  align-items: flex-start;
+}
+
+.contacts-container > * {
+  flex: 1;
+}
+
+.contacts-form-container {
+  height: 644px;
+  padding: 130px 0;
+  padding-right: 40px;
+  width: 625px;
+}
+
+.contacts-form-heading {
+  color: var(--white);
+  font-size: 42px;
+  letter-spacing: 2.1px;
+  margin-bottom: 44px;
+}
+
+.contacts-label {
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  padding: 8px 0;
+}
+
+.contacts-label:first-of-type {
+  margin-right: 30px;
+}
+
+.contacts-label:not(:last-of-type) {
+  display: inline-block;
+  width: calc(50% - 18px);
+}
+
+.contacts-label:last-of-type {
+  display: block;
+  margin: 44px 0;
+}
+
+.contacts-label > .contacts-input-name,
+.contacts-input,
+.contacts-textarea {
+  color: rgba(157, 164, 189, 0.4);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 1.1px;
+  text-transform: uppercase;
+}
+
+.contacts-input {
+  background-color: transparent;
+  border: unset;
+  outline: none;
+  caret-color: var(--white);
+  color: rgba(157, 164, 189, 0.4);
+  cursor: pointer;
+}
+
+.contacts-textarea {
+  background-color: transparent;
+  caret-color: var(--white);
+  color: rgba(157, 164, 189, 0.4);
+  border: unset;
+  display: block;
+  width: 100%;
+  outline: none;
+  resize: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.contacts-form-button {
+  color: var(--white);
+  text-align: center;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.08px;
+  text-transform: uppercase;
+  padding: 12px 38px;
+  min-width: 160px;
+}
+
+.contacts-details {
+  padding: 130px 0 130px 100px;
+  position: relative;
+  z-index: 100;
+}
+
+.contacts-details-backdrop {
   background-image: linear-gradient(
       rgba(25, 28, 38, 0.9),
       rgba(25, 28, 38, 0.9)
     ),
     url(./images/contacts-background.jpg);
   background-repeat: no-repeat;
-  background-position: cover;
+  background-position: center;
+  background-size: 625px;
+  width: 625px;
+  height: 644px;
+  flex-shrink: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
 }
 
 .contacts-heading {
