@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Module 06 Lesson 11</title>
+    <title>Module 06 Lesson 12</title>
     <style>
       body {
         font-family: Arial, Helvetica, sans-serif;
@@ -25,385 +25,272 @@
       label {
         display: block;
       }
+
+      input {
+        display: inline-block;
+        min-width: 100px;
+      }
     </style>
   </head>
   <body>
-    <h1>Elements of Forms</h1>
+    <h1>Form Validation</h1>
     <br />
-    <!-- Label Example -->
-
-    <!-- Implicit Label and Input Linking -->
-    <h2>1. Form and Label Elements</h2>
+    <h2>1. Validation Attributes</h2>
     <hr />
-    <h3>Nested Label and Input</h3>
+
+    <!-- Required Attribute -->
+    <h3>a. Required Attribute</h3>
+    <pre>Used for mandatory fields</pre>
+    <br />
     <form>
       <label>
         Email
-        <input type="email" name="email" />
+        <input type="email" name="email" required />
       </label>
-
       <label>
         Password
-        <input type="password" name="password" />
+        <input type="password" name="password" required />
       </label>
 
       <button type="submit">Submit</button>
     </form>
-
-    <!-- Explicit Label and Input Linking -->
-    <h3>Sibling Label and Input</h3>
-    <form>
-      <label for="user_email">Email</label>
-      <input type="email" name="email" id="user_email" />
-
-      <label for="user_password">Password</label>
-      <input type="password" name="password" id="user_password" />
-
-      <button type="submit">Submit</button>
-    </form>
-
-    <!-- Autofocus Attribute -->
-    <h2>2. Input Elements</h2>
+    <br />
     <hr />
-    <h3>Input Attributes</h3>
-    <h4>a. Autofocus Attribute</h4>
-    <form>
-      <label>
-        First name
-        <input type="text" name="firstName" autofocus />
-      </label>
-      <label>
-        Last name
-        <input type="text" name="lastName" />
-      </label>
-      <button type="submit">Submit</button>
-    </form>
 
-    <!-- Placeholder Attribute -->
-    <h4>b. Placeholder Attribute</h4>
+    <!-- MinLength and MaxLength Attributes -->
+    <h3>b. MinLength and MaxLength Attributes</h3>
+    <pre>Used to provide length limitations</pre>
+    <br />
     <form>
       <label>
         Username
-        <input type="text" name="username" placeholder="Jacob Mercer" />
-      </label>
-      <button type="submit">Submit feedback</button>
-    </form>
-    <br />
-    <hr />
-    <h3>Input Element Types</h3>
-    <h4>a. Email and Password</h4>
-    <form>
-      <label>
-        Email
-        <input type="email" name="email" />
+        <input type="text" name="username" required minlength="3" />
       </label>
       <label>
         Password
-        <input type="password" name="pwd" minlength="5" maxlength="12" />
-      </label>
-      <label>
-        Phone number
-        <input type="tel" name="phone" />
-      </label>
-      <button type="submit">Register</button>
-    </form>
-
-    <h4>b. Radio buttons</h4>
-    <form>
-      <p>Choose a color:</p>
-      <label>
-        <input type="radio" name="color" value="red" />
-        Red
-      </label>
-      <label>
-        <input type="radio" name="color" value="white" checked />
-        White
-      </label>
-      <label>
-        <input type="radio" name="color" value="green" />
-        Green
-      </label>
-
-      <p>Select size:</p>
-      <label>
-        <input type="radio" name="size" value="sm" />
-        Small
-      </label>
-      <label>
-        <input type="radio" name="size" value="md" />
-        Medium
-      </label>
-      <label>
-        <input type="radio" name="size" value="lg" checked />
-        Large
-      </label>
-    </form>
-
-    <h4>c. Checkboxes</h4>
-    <form>
-      <p>What are your hobbies?</p>
-      <label>
-        <input type="checkbox" name="hobby" value="music" checked />
-        Music
-      </label>
-      <label>
-        <input type="checkbox" name="hobby" value="sports" checked />
-        Sports
-      </label>
-      <label>
-        <input type="checkbox" name="hobby" value="reading" />
-        Reading
-      </label>
-    </form>
-
-    <h4>d. Numbers</h4>
-    <form>
-      <label>
-        Weight with 0.5 step value:
         <input
-          type="number"
-          name="weight"
-          min="0"
-          max="200"
-          step="0.5"
-          value="0"
+          type="password"
+          name="password"
+          required
+          minlength="6"
+          maxlength="12"
+        />
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+    <br />
+    <hr />
+
+    <!-- Min and Max Attributes -->
+    <h3>c. Min and Max Attributes</h3>
+    <pre>Allows to check if a numeric value is within a specified range</pre>
+    <br />
+    <form>
+      <label>
+        How many pizzas do you want to order?
+        <input type="number" name="amount" required min="1" max="10" />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+    <br />
+    <hr />
+
+    <!-- Regular Expressions -->
+    <h3>d. Regular Expressions</h3>
+    <pre>Sequence of characters that specifies a search pattern</pre>
+    <br />
+    <form>
+      <label>
+        Username
+        <input
+          type="text"
+          name="text"
+          required
+          pattern="^[a-zA-Z]+\s[a-zA-Z]+$"
+          title="Username must be two words separated by space."
+        />
+      </label>
+      <label>
+        Password
+        <input
+          type="password"
+          name="password"
+          required
+          minlength="6"
+          maxlength="12"
+          pattern="^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?!.*\s).*$"
+          title="Please include at least 1 uppercase character, 1 lowercase character, and 1 number."
         />
       </label>
       <button type="submit">Submit</button>
     </form>
+    <br />
+    <br />
 
-    <h4>e. Telephone Numbers</h4>
-    <form>
-      <label>
-        Phone number
-        <input type="tel" name="phone_number" />
-      </label>
+    <h2>2. State Pseudo-Classes</h2>
+    <hr />
 
-      <button type="submit">Submit</button>
-    </form>
+    <!-- Enabled and Disabled -->
+    <h3>a. :enabled & :disabled</h3>
+    <pre>input, select, button</pre>
+    <br />
+    <button class="btn">Active button</button>
+    <button class="btn" disabled>Disabled button</button>
+    <br />
+    <br />
+    <hr />
 
-    <h4>f. Range Sliders</h4>
-    <label>
-      Interest rate:
+    <h3>b. :checked</h3>
+    <pre>checkbox</pre>
+    <br />
+
+    <label for="music">
       <input
-        type="range"
-        name="interest_rate"
-        value="40"
-        min="0"
-        max="100"
-        step="20"
-      />
-    </label>
-
-    <p>Selected value: <span class="js-selected-value">40</span></p>
-
-    <h4>g. Dates and Times</h4>
-    <label>
-      Date
-      <input type="date" />
-    </label>
-
-    <label>
-      Time
-      <input type="time" />
-    </label>
-
-    <label>
-      Date and time
-      <input type="datetime-local" />
-    </label>
-
-    <!-- Textarea element -->
-    <h2>3. Textarea Element</h2>
-    <hr />
-    <form>
-      <label>
-        Username
-        <input type="text" name="username" placeholder="Jack Meadows" />
-      </label>
-      <label>
-        Feedback
-        <textarea
-          name="feedback"
-          rows="5"
-          placeholder="Enter your message here..."
-        ></textarea>
-      </label>
-      <button type="submit">Submit</button>
-    </form>
-
-    <!-- Select Element -->
-    <h2>4. Select Element</h2>
+        type="checkbox"
+        name="hobby"
+        value="music"
+        id="music"
+      />Music</label
+    >
+    <br />
     <hr />
 
-    <h3>Option Tag</h3>
-    <label for="size">Size</label>
-    <select id="size" name="size">
-      <option value="xs">Extra Small</option>
-      <option value="s">Small</option>
-      <option value="m" selected>Medium</option>
-      <option value="l">Large</option>
-    </select>
-
-    <h3>OptGroup Tag</h3>
-    <label for="month">Month</label>
-    <select name="month" id="month">
-      <optgroup label="Summer">
-        <option value="s6">June</option>
-        <option value="s7">July</option>
-        <option value="s8">August</option>
-      </optgroup>
-
-      <optgroup label="Autumn">
-        <option value="s9">September</option>
-        <option value="s10">October</option>
-        <option value="s11">November</option>
-      </optgroup>
-    </select>
-
-    <!-- Datalist Element -->
-    <h2>5. Datalist Element</h2>
-    <hr />
-
-    <!-- Input Predefined Values -->
-    <h3>Input Predefined Values</h3>
-    <label for="fav">Choose your favourite browser</label>
-    <input list="browsers" name="fav" id="fav" />
-
-    <datalist id="browsers">
-      <option>Edge</option>
-      <option>Firefox</option>
-      <option>Chrome</option>
-      <option>Opera</option>
-      <option>Safari</option>
-    </datalist>
-
-    <!-- Value Attribute -->
-    <h3>Value Attribute</h3>
-    <label for="state">Choose your state</label>
-    <input type="text" name="state" id="state" list="states" />
-    <datalist id="states">
-      <option value="AL">Alabama</option>
-      <option value="AK">Alaska</option>
-      <option value="AZ">Arizona</option>
-      <option value="AR">Arkansas</option>
-    </datalist>
-
-    <!-- Field Grouping -->
-    <h2>6. Field Grouping</h2>
-    <hr />
-    <h3>Semantic Grouping</h3>
+    <!-- In Range and Out of Range -->
+    <h3>c. :in-range & :out-of-range</h3>
+    <pre>range, number, date</pre>
+    <br />
     <form class="form">
-      <fieldset class="form-group">
-        <legend class="group-title">Enter your contact details</legend>
-        <label class="form-label">
-          Name
-          <input type="text" name="username" />
-        </label>
-        <label class="form-label">
-          Email
-          <input type="email" name="email" />
-        </label>
-      </fieldset>
-      <br />
-
-      <fieldset class="form-group">
-        <legend class="group-title">Your favourite programming language</legend>
-        <div class="form-field">
-          <input type="checkbox" name="language" value="python" id="python" />
-          <label class="form-label" for="python">Python</label>
-        </div>
-        <div class="form-field">
-          <input type="checkbox" name="language" value="js" id="js" />
-          <label class="form-label" for="js">JavaScript</label>
-        </div>
-        <div class="form-field">
-          <input type="checkbox" name="language" value="ruby" id="ruby" />
-          <label class="form-label" for="ruby">Python</label>
-        </div>
-      </fieldset>
-      <br />
-
-      <fieldset class="form-group">
-        <legend class="group-title">I want to receive</legend>
-        <div class="form-field">
-          <input type="checkbox" name="newsletter" value="weekly" id="weekly" />
-          <label class="form-label" for="weekly">The weekly newsletter</label>
-        </div>
-        <div class="form-field">
-          <input type="checkbox" name="newsletter" value="offers" id="offers" />
-          <label class="form-label" for="offers">Offers from the company</label>
-        </div>
-        <div class="form-field">
+      <div class="form-field">
+        <label for="amount-1" class="form-label"
+          >How many pizzas do you want to order?
           <input
-            type="checkbox"
-            name="newsletter"
-            value="associated_offers"
-            id="associated_offers"
-          />
-          <label class="form-label" for="associated_offers"
-            >Offers from associated companies</label
-          >
-        </div>
-      </fieldset>
-      <br />
-
-      <button type="submit">Subscribe</button>
+            type="number"
+            required
+            min="1"
+            max="10"
+            step="1"
+            value="0"
+            name="amount-1"
+            id="amount-1"
+            class="form-input"
+        /></label>
+      </div>
+      <div class="form-field">
+        <label for="amount-2" class="form-label"
+          >How many pizzas do you want to order?
+          <input
+            type="number"
+            required
+            min="1"
+            max="10"
+            step="1"
+            value="3"
+            name="amount-2"
+            id="amount-2"
+            class="form-input"
+        /></label>
+      </div>
+      <div class="form-field">
+        <label for="amount-3" class="form-label">
+          How many pizzas do you want to order?
+          <input
+            type="number"
+            required
+            min="1"
+            max="10"
+            step="1"
+            name="amount-3"
+            id="amount-3"
+            class="form-input"
+        /></label>
+      </div>
+      <button type="submit">Submit</button>
     </form>
     <br />
     <hr />
 
-    <h3>Generic Grouping</h3>
+    <!-- Required and Optional -->
+    <h3>d. :required & :optional</h3>
+    <pre>general usage</pre>
+    <br />
     <form class="form">
-      <div
-        class="form-group"
-        role="group"
-        aria-labelledby="contact-details-head"
-      >
-        <p id="contact-details-head">Enter your contact details</p>
-        <label>
-          Name
-          <input type="text" name="username" />
-        </label>
-        <label>
-          Email
-          <input type="email" name="email" />
-        </label>
-      </div>
+      <label class="form-label">
+        <span class="label-text">Username (optional)</span>
+        <input type="text" class="form-input" name="username" />
+      </label>
 
-      <div class="form-group" role="group" aria-labelledby="language-head">
-        <p id="language-head">Your favourite programming language</p>
-        <label>
-          <input type="checkbox" name="language" value="python" />
-          Python
-        </label>
-        <label>
-          <input type="checkbox" name="language" value="js" />
-          JavaScript
-        </label>
-        <label>
-          <input type="checkbox" name="language" value="ruby" />
-          Ruby
-        </label>
-      </div>
+      <label class="form-label">
+        <span class="label-text">Email (required)</span>
+        <input type="email" class="form-input" name="mail" required />
+      </label>
 
-      <div class="form-group" role="group" aria-labelledby="newsletter-head">
-        <p id="newsletter-head">I want to receive</p>
-        <label>
-          <input type="checkbox" name="newsletter" value="weekly" />
-          The weekly newsletter
-        </label>
-        <label>
-          <input type="checkbox" name="newsletter" value="company_offers" />
-          Offers from the company
-        </label>
-        <label>
-          <input type="checkbox" name="newsletter" value="associated_offers" />
-          Offers from associated companies
-        </label>
-      </div>
+      <button type="submit">Submit</button>
+    </form>
+    <br />
+    <hr />
 
-      <button type="submit">Subscribe</button>
+    <!-- Valid and Invalid -->
+    <h3>d. :valid & :invalid</h3>
+    <pre>general usage</pre>
+    <br />
+    <form class="form">
+      <label class="form-label">
+        <span class="label-text">Username</span>
+        <input
+          type="text"
+          class="form-input"
+          name="username"
+          required
+          minlength="3"
+        />
+      </label>
+
+      <label class="form-label">
+        <span class="label-text">Email</span>
+        <input type="email" class="form-input" name="mail" required />
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+    <br />
+    <hr />
+
+    <!-- Placeholder Shown -->
+    <h3>e. :placeholder-shown</h3>
+    <pre>general usage</pre>
+    <br />
+    <form class="form">
+      <label class="form-label">
+        <span class="label-text">Username</span>
+        <input
+          type="text"
+          class="form-input"
+          name="username"
+          placeholder="Jacob Mercer"
+        />
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+    <br />
+    <hr />
+
+    <!-- Focus -->
+    <h3>f. :focus-within</h3>
+    <pre>input ancestors</pre>
+    <br />
+
+    <form class="form">
+      <label class="form-label">
+        <span class="label-text">First name</span>
+        <input class="form-input" type="text" name="firstName" />
+      </label>
+      <label class="form-label">
+        <span class="label-text">Last name</span>
+        <input class="form-input" type="text" name="lastName" />
+      </label>
+      <button type="submit">Submit</button>
     </form>
   </body>
 </html>
