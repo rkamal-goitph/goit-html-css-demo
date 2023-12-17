@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Module 06 Lesson 11</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      h3 {
+        color: maroon;
+      }
+
+      h4 {
+        color: navy;
+        margin-left: 20px;
+      }
+
+      label {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Elements of Forms</h1>
+    <br />
+    <!-- Label Example -->
+
+    <!-- Implicit Label and Input Linking -->
+    <h2>1. Form and Label Elements</h2>
+    <hr />
+    <h3>Nested Label and Input</h3>
+    <form>
+      <label>
+        Email
+        <input type="email" name="email" />
+      </label>
+
+      <label>
+        Password
+        <input type="password" name="password" />
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Explicit Label and Input Linking -->
+    <h3>Sibling Label and Input</h3>
+    <form>
+      <label for="user_email">Email</label>
+      <input type="email" name="email" id="user_email" />
+
+      <label for="user_password">Password</label>
+      <input type="password" name="password" id="user_password" />
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Autofocus Attribute -->
+    <h2>2. Input Elements</h2>
+    <hr />
+    <h3>Input Attributes</h3>
+    <h4>a. Autofocus Attribute</h4>
+    <form>
+      <label>
+        First name
+        <input type="text" name="firstName" autofocus />
+      </label>
+      <label>
+        Last name
+        <input type="text" name="lastName" />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Placeholder Attribute -->
+    <h4>b. Placeholder Attribute</h4>
+    <form>
+      <label>
+        Username
+        <input type="text" name="username" placeholder="Jacob Mercer" />
+      </label>
+      <button type="submit">Submit feedback</button>
+    </form>
+    <br />
+    <hr />
+    <h3>Input Element Types</h3>
+    <h4>a. Email and Password</h4>
+    <form>
+      <label>
+        Email
+        <input type="email" name="email" />
+      </label>
+      <label>
+        Password
+        <input type="password" name="pwd" minlength="5" maxlength="12" />
+      </label>
+      <label>
+        Phone number
+        <input type="tel" name="phone" />
+      </label>
+      <button type="submit">Register</button>
+    </form>
+
+    <h4>b. Radio buttons</h4>
+    <form>
+      <p>Choose a color:</p>
+      <label>
+        <input type="radio" name="color" value="red" />
+        Red
+      </label>
+      <label>
+        <input type="radio" name="color" value="white" checked />
+        White
+      </label>
+      <label>
+        <input type="radio" name="color" value="green" />
+        Green
+      </label>
+
+      <p>Select size:</p>
+      <label>
+        <input type="radio" name="size" value="sm" />
+        Small
+      </label>
+      <label>
+        <input type="radio" name="size" value="md" />
+        Medium
+      </label>
+      <label>
+        <input type="radio" name="size" value="lg" checked />
+        Large
+      </label>
+    </form>
+
+    <h4>c. Checkboxes</h4>
+    <form>
+      <p>What are your hobbies?</p>
+      <label>
+        <input type="checkbox" name="hobby" value="music" checked />
+        Music
+      </label>
+      <label>
+        <input type="checkbox" name="hobby" value="sports" checked />
+        Sports
+      </label>
+      <label>
+        <input type="checkbox" name="hobby" value="reading" />
+        Reading
+      </label>
+    </form>
+
+    <h4>d. Numbers</h4>
+    <form>
+      <label>
+        Weight with 0.5 step value:
+        <input
+          type="number"
+          name="weight"
+          min="0"
+          max="200"
+          step="0.5"
+          value="0"
+        />
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+
+    <h4>e. Telephone Numbers</h4>
+    <form>
+      <label>
+        Phone number
+        <input type="tel" name="phone_number" />
+      </label>
+
+      <button type="submit">Submit</button>
+    </form>
+
+    <h4>f. Range Sliders</h4>
+    <label>
+      Interest rate:
+      <input
+        type="range"
+        name="interest_rate"
+        value="40"
+        min="0"
+        max="100"
+        step="20"
+      />
+    </label>
+
+    <p>Selected value: <span class="js-selected-value">40</span></p>
+
+    <h4>g. Dates and Times</h4>
+    <label>
+      Date
+      <input type="date" />
+    </label>
+
+    <label>
+      Time
+      <input type="time" />
+    </label>
+
+    <label>
+      Date and time
+      <input type="datetime-local" />
+    </label>
+
+    <!-- Textarea element -->
+    <h2>3. Textarea Element</h2>
+    <hr />
+    <form>
+      <label>
+        Username
+        <input type="text" name="username" placeholder="Jack Meadows" />
+      </label>
+      <label>
+        Feedback
+        <textarea
+          name="feedback"
+          rows="5"
+          placeholder="Enter your message here..."
+        ></textarea>
+      </label>
+      <button type="submit">Submit</button>
+    </form>
+
+    <!-- Select Element -->
+    <h2>4. Select Element</h2>
+    <hr />
+
+    <h3>Option Tag</h3>
+    <label for="size">Size</label>
+    <select id="size" name="size">
+      <option value="xs">Extra Small</option>
+      <option value="s">Small</option>
+      <option value="m" selected>Medium</option>
+      <option value="l">Large</option>
+    </select>
+
+    <h3>OptGroup Tag</h3>
+    <label for="month">Month</label>
+    <select name="month" id="month">
+      <optgroup label="Summer">
+        <option value="s6">June</option>
+        <option value="s7">July</option>
+        <option value="s8">August</option>
+      </optgroup>
+
+      <optgroup label="Autumn">
+        <option value="s9">September</option>
+        <option value="s10">October</option>
+        <option value="s11">November</option>
+      </optgroup>
+    </select>
+
+    <!-- Datalist Element -->
+    <h2>5. Datalist Element</h2>
+    <hr />
+
+    <!-- Input Predefined Values -->
+    <h3>Input Predefined Values</h3>
+    <label for="fav">Choose your favourite browser</label>
+    <input list="browsers" name="fav" id="fav" />
+
+    <datalist id="browsers">
+      <option>Edge</option>
+      <option>Firefox</option>
+      <option>Chrome</option>
+      <option>Opera</option>
+      <option>Safari</option>
+    </datalist>
+
+    <!-- Value Attribute -->
+    <h3>Value Attribute</h3>
+    <label for="state">Choose your state</label>
+    <input type="text" name="state" id="state" list="states" />
+    <datalist id="states">
+      <option value="AL">Alabama</option>
+      <option value="AK">Alaska</option>
+      <option value="AZ">Arizona</option>
+      <option value="AR">Arkansas</option>
+    </datalist>
+
+    <!-- Field Grouping -->
+    <h2>6. Field Grouping</h2>
+    <hr />
+    <h3>Semantic Grouping</h3>
+    <form class="form">
+      <fieldset class="form-group">
+        <legend class="group-title">Enter your contact details</legend>
+        <label class="form-label">
+          Name
+          <input type="text" name="username" />
+        </label>
+        <label class="form-label">
+          Email
+          <input type="email" name="email" />
+        </label>
+      </fieldset>
+      <br />
+
+      <fieldset class="form-group">
+        <legend class="group-title">Your favourite programming language</legend>
+        <div class="form-field">
+          <input type="checkbox" name="language" value="python" id="python" />
+          <label class="form-label" for="python">Python</label>
+        </div>
+        <div class="form-field">
+          <input type="checkbox" name="language" value="js" id="js" />
+          <label class="form-label" for="js">JavaScript</label>
+        </div>
+        <div class="form-field">
+          <input type="checkbox" name="language" value="ruby" id="ruby" />
+          <label class="form-label" for="ruby">Python</label>
+        </div>
+      </fieldset>
+      <br />
+
+      <fieldset class="form-group">
+        <legend class="group-title">I want to receive</legend>
+        <div class="form-field">
+          <input type="checkbox" name="newsletter" value="weekly" id="weekly" />
+          <label class="form-label" for="weekly">The weekly newsletter</label>
+        </div>
+        <div class="form-field">
+          <input type="checkbox" name="newsletter" value="offers" id="offers" />
+          <label class="form-label" for="offers">Offers from the company</label>
+        </div>
+        <div class="form-field">
+          <input
+            type="checkbox"
+            name="newsletter"
+            value="associated_offers"
+            id="associated_offers"
+          />
+          <label class="form-label" for="associated_offers"
+            >Offers from associated companies</label
+          >
+        </div>
+      </fieldset>
+      <br />
+
+      <button type="submit">Subscribe</button>
+    </form>
+    <br />
+    <hr />
+
+    <h3>Generic Grouping</h3>
+    <form class="form">
+      <div
+        class="form-group"
+        role="group"
+        aria-labelledby="contact-details-head"
+      >
+        <p id="contact-details-head">Enter your contact details</p>
+        <label>
+          Name
+          <input type="text" name="username" />
+        </label>
+        <label>
+          Email
+          <input type="email" name="email" />
+        </label>
+      </div>
+
+      <div class="form-group" role="group" aria-labelledby="language-head">
+        <p id="language-head">Your favourite programming language</p>
+        <label>
+          <input type="checkbox" name="language" value="python" />
+          Python
+        </label>
+        <label>
+          <input type="checkbox" name="language" value="js" />
+          JavaScript
+        </label>
+        <label>
+          <input type="checkbox" name="language" value="ruby" />
+          Ruby
+        </label>
+      </div>
+
+      <div class="form-group" role="group" aria-labelledby="newsletter-head">
+        <p id="newsletter-head">I want to receive</p>
+        <label>
+          <input type="checkbox" name="newsletter" value="weekly" />
+          The weekly newsletter
+        </label>
+        <label>
+          <input type="checkbox" name="newsletter" value="company_offers" />
+          Offers from the company
+        </label>
+        <label>
+          <input type="checkbox" name="newsletter" value="associated_offers" />
+          Offers from associated companies
+        </label>
+      </div>
+
+      <button type="submit">Subscribe</button>
+    </form>
+  </body>
+</html>
