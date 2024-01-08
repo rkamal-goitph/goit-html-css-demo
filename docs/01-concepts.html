@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Logical Operators</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      /* Basic table styles */
+      table {
+        width: 100%; /* Full-width */
+        border-collapse: collapse; /* Collapse borders */
+        text-align: left; /* Align text to the left */
+        margin-bottom: 20px; /* Add some space below the table */
+      }
+
+      thead,
+      th {
+        text-align: center;
+        font-weight: 700;
+        text-transform: uppercase;
+        background-color: aliceblue;
+      }
+
+      /* Table header styles */
+      th {
+        color: #333; /* Dark text color */
+        padding: 10px; /* Add some padding */
+        font-weight: bold; /* Make text bold */
+      }
+
+      /* Table data cell styles */
+      td {
+        border: 1px solid #ddd; /* Light grey border */
+        padding: 8px; /* Add some padding */
+      }
+
+      /* Hover effect for table rows */
+      tr:hover {
+        background-color: #ddd; /* Light grey background on hover */
+      }
+
+      /* Zebra striping for table rows */
+      tr:nth-child(even) {
+        background-color: #f9f9f9; /* Very light grey for even rows */
+      }
+
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Logical Operators</h1>
+    <hr />
+    <h2>1. AND Operator</h2>
+    <ul>
+      <li>
+        The AND operator is used to combine multiple media features in a media
+        query, where all conditions must be true for the styles to apply.
+      </li>
+      <br />
+      <li>
+        For example, if you want to apply styles when the viewport is both a
+        minimum width and in landscape orientation
+      </li>
+    </ul>
+    <h2>2. NOT Operator</h2>
+    <ul>
+      <li>
+        The NOT operator negates a media query. It's used to apply styles when
+        the query's conditions are not met.
+      </li>
+      <br />
+      <li>
+        This can be useful for applying styles to all devices except those that
+        meet a certain condition.
+      </li>
+    </ul>
+    <h2>3. Commas (Implied OR)</h2>
+    <ul>
+      <li>
+        In CSS media queries, a comma is used to separate multiple media
+        queries, which acts like an OR operator.
+      </li>
+      <br />
+      <li>
+        Each media query is evaluated independently, and if any of the queries
+        returns true, the styles are applied.
+      </li>
+    </ul>
+    <br />
+    <h1>Summary of Use Cases</h1>
+    <table>
+      <thead>
+        <tr>
+          <td>Operator</td>
+          <td>Use Cases</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>AND</td>
+          <td>
+            Useful for targeting a very specific range or type of devices.
+          </td>
+        </tr>
+        <tr>
+          <td>OR</td>
+          <td>
+            Helpful when you want to exclude certain devices or conditions.
+          </td>
+        </tr>
+        <tr>
+          <td>Commas (OR)</td>
+          <td>
+            Ideal for broader conditions where you want the styles to apply in
+            multiple different scenarios
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br /><br />
+    <h1>Media Types</h1>
+    <hr />
+    <h2 class="media">1. all</h2>
+    <ul>
+      <li>
+        It doesn't specify any particular device type, so the styles will apply
+        universally across print, screen, speech, and other media types unless
+        overridden by more specific media queries.
+      </li>
+      <br />
+      <li>It's the default media type if none is specified.</li>
+    </ul>
+    <h2 class="media">2. print</h2>
+    <ul>
+      <li>
+        This media type targets print devices or documents viewed in print
+        preview mode.
+      </li>
+      <br />
+      <li>
+        Styles defined with print are used when the document is printed, such as
+        hiding elements that are not relevant for print, changing color to black
+        and white, or modifying layout to fit a page.
+      </li>
+    </ul>
+    <h2 class="media">3. screen</h2>
+    <ul>
+      <li>
+        The screen media type targets screens of computers, tablets, and
+        smartphones.
+      </li>
+      <br />
+      <li>
+        This is the most common media type used for designing responsive web
+        layouts and styles that are specific to screen viewing, like animations
+        or hover effects.
+      </li>
+    </ul>
+    <h2 class="media">4. speech</h2>
+    <ul>
+      <li>This media type is used for speech synthesizers.</li>
+      <br />
+      <li>
+        Styles under this type can be used to control how a document is spoken.
+      </li>
+    </ul>
+    <br />
+    <h1>Summary of Use Cases</h1>
+    <table>
+      <thead>
+        <tr>
+          <td>Media Type</td>
+          <td>Use Cases</td>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>all</td>
+          <td>
+            General styles that are applicable to all devices, like font family
+            or color.
+          </td>
+        </tr>
+        <tr>
+          <td>print</td>
+          <td>
+            Formatting documents for printing, like changing layout for a
+            printer-friendly version or hiding non-essential elements (like
+            navigation).
+          </td>
+        </tr>
+        <tr>
+          <td>screen</td>
+          <td>
+            Responsive web design, where different styles are applied depending
+            on the screen size or resolution (like adjusting layout for mobile
+            devices).
+          </td>
+        </tr>
+        <tr>
+          <td>speech</td>
+          <td>
+            Accessibility, where certain content is customized for screen
+            readers, like altering the content order or hiding visual but not
+            auditory content.
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br /><br />
+    <h1>Keywords</h1>
+    <hr />
+    <br />
+    <h2>1. min-width / max-width</h2>
+    <ul>
+      <li>
+        Defines the minimum or maximum width of the viewport. Example: @media
+        (min-width: 600px) { ... }
+      </li>
+    </ul>
+    <br />
+
+    <h2>2. min-height / max-height</h2>
+    <ul>
+      <li>
+        Similar to width, but for the height of the viewport. Example: @media
+        (max-height: 800px) { ... }
+      </li>
+    </ul>
+    <br />
+
+    <h2>3. orientation: portrait / landscape</h2>
+    <ul>
+      <li>
+        Targets the orientation of the device (vertical or horizontal). Example:
+        @media (orientation: landscape) { ... }
+      </li>
+    </ul>
+    <br />
+
+    <h2>4. aspect-ratio / min-aspect-ratio / max-aspect-ratio</h2>
+    <ul>
+      <li>
+        Targets the width-to-height ratio of the viewport. Example: @media
+        (min-aspect-ratio: 16/9) { ... }
+      </li>
+    </ul>
+    <br />
+
+    <h2>5. resolution / min-resolution / max-resolution</h2>
+    <ul>
+      <li>
+        For targeting the device’s screen resolution. Example: @media
+        (min-resolution: 300dpi) { ... }
+      </li>
+    </ul>
+    <br />
+
+    <h2>6. color / min-color / max-color</h2>
+    <ul>
+      <li>
+        Queries the number of bits per color component of the output device.
+        Example: @media (min-color: 8) { ... }
+      </li>
+    </ul>
+    <br />
+
+    <h2>7. color-index / min-color-index / max-color-index</h2>
+    <ul>
+      <li>
+        Relates to the number of colors the device can display. Example: @media
+        (max-color-index: 256) { ... }
+      </li>
+    </ul>
+    <br />
+
+    <h2>8. monochrome / min-monochrome / max-monochrome</h2>
+    <ul>
+      <li>
+        For targeting monochrome devices with the number of bits per pixel.
+        Example: @media (monochrome) { ... }
+      </li>
+    </ul>
+    <br />
+
+    <h2>9. grid</h2>
+    <ul>
+      <li>
+        Determines whether the device is a grid-based or bitmap. Example: @media
+        (grid: 1) { ... }
+      </li>
+    </ul>
+    <br />
+
+    <h2>10. hover / any-hover</h2>
+    <ul>
+      <li>
+        Queries whether the primary input mechanism allows the user to hover
+        over elements. Example: @media (hover: hover) { ... }
+      </li>
+    </ul>
+    <br />
+
+    <h2>11. pointer / any-pointer</h2>
+    <ul>
+      <li>
+        Determines the accuracy of the primary pointing device. Example: @media
+        (pointer: coarse) { ... }
+      </li>
+    </ul>
+    <br />
+
+    <h2>12. update-frequency</h2>
+    <ul>
+      <li>
+        Targets devices based on how frequently the output device can modify the
+        appearance of content. Example: @media (update-frequency: slow) { ... }
+      </li>
+    </ul>
+    <br />
+
+    <h2>13. scripting</h2>
+    <ul>
+      <li>
+        For checking if scripting (JavaScript) is available. Example: @media
+        (scripting: none) { ... }
+      </li>
+    </ul>
+    <br />
+
+    <h1>Syntax</h1>
+    <hr />
+    <br />
+    <pre>
+    @media only|not media-type only|and|not (media-feature) {
+      
+      /*
+      A set of CSS rules to be applied to the document
+      if the media type and expression conditions are met
+      */
+
+    }</pre
+    >
+    <br /><br />
+    <h1>Declaration Approach</h1>
+    <hr />
+    <h2>1. Nesting Style Declarations inside Media Queries</h2>
+    <ul>
+      <li>
+        This approach involves writing a media query and then defining all the
+        relevant styles inside it.
+      </li>
+      <br />
+      <li>
+        Example:
+        <pre>
+        @media (min-width: 600px) {
+
+          .container {
+              width: 80%;
+          }
+          h1 {
+              font-size: 2em;
+          }
+          /* more styles */
+
+        } 
+      </pre
+        >
+      </li>
+    </ul>
+    <br />
+    <h2>2. Nesting Media Queries inside Style Declarations</h2>
+    <ul>
+      <li>
+        In this approach, you define your styles for an element or class, and
+        nest media queries within these definitions. This is particularly common
+        in preprocessors like Sass or Less.
+      </li>
+      <br />
+      <li>
+        Example:
+        <pre>
+        .container {
+
+            width: 100%;
+
+            @media (min-width: 600px) {
+                width: 80%;
+            }
+
+        }
+
+        h1 {
+
+            font-size: 1.5em;
+
+            @media (min-width: 600px) {
+                font-size: 2em;
+            }
+
+            /* more styles */
+        }
+        
+      </pre
+        >
+      </li>
+    </ul>
+    <br /><br />
+    <h1>Summary of Use Cases</h1>
+    <br />
+    <table border="1">
+      <thead>
+        <tr>
+          <th>Approach</th>
+          <th>Pros</th>
+          <th>Cons</th>
+        </tr>
+      </thead>
+      <tbody>
+        <!-- Row for Approach 1: Nesting Style Declarations inside Media Queries -->
+        <tr>
+          <td>Nesting Style Declarations inside Media Queries</td>
+          <td>
+            <ul>
+              <li>Easier to understand site layout on different devices</li>
+              <li>Keeps all styles for a specific breakpoint in one place</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>
+                Can lead to repetition for similar styles at different
+                breakpoints
+              </li>
+              <li>
+                Harder to track styles for a specific element across breakpoints
+              </li>
+            </ul>
+          </td>
+        </tr>
+
+        <!-- Row for Approach 2: Nesting Media Queries inside Style Declarations -->
+        <tr>
+          <td>Nesting Media Queries inside Style Declarations</td>
+          <td>
+            <ul>
+              <li>Easier to find all styles for a specific element or class</li>
+              <li>Reduces repetition by not redeclaring the selector</li>
+            </ul>
+          </td>
+          <td>
+            <ul>
+              <li>
+                Media queries are spread out, making them harder to locate
+              </li>
+              <li>May result in longer CSS files for complex layouts</li>
+            </ul>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <br /><br />
+    <h1>Viewports</h1>
+    <hr />
+    <h2>1. Visual Viewport</h2>
+    <ul>
+      <li>
+        The visual viewport refers to the area of a webpage that is currently
+        visible to the user. It's the part of the page you're actually seeing on
+        your screen and is accordant to your device's resolution.
+      </li>
+      <br />
+      <li>
+        It can change size when a user zooms in or out. Zooming in decreases the
+        size of the visual viewport (showing less of the page but in greater
+        detail), while zooming out increases its size (showing more of the page
+        but in less detail).
+      </li>
+    </ul>
+    <h2>2. Layout Viewport</h2>
+    <ul>
+      <li>
+        The layout viewport, on the other hand, is the area where the browser
+        lays out the webpage before adjusting for the visual viewport.
+      </li>
+      <br />
+      <li>
+        It remains constant, regardless of the user's zoom level. This means
+        that elements sized with percentages or viewport units will stay the
+        same size relative to the layout viewport, not the visual viewport.
+      </li>
+    </ul>
+    <br /><br />
+    <h1>Developer Tools</h1>
+    <hr />
+    <br /><br />
+    <h1>Layout Types</h1>
+    <hr />
+    <h2>1. Responsive Web Design</h2>
+    <ul>
+      <li>
+        Responsive design uses a flexible, fluid layout that adapts to the size
+        of the user's screen.
+      </li>
+      <br />
+      <li>
+        This approach provides a consistent user experience across different
+        devices, as the content reflows to fit the available space, whether on a
+        desktop, tablet, or mobile device.
+      </li>
+    </ul>
+    <h2>2. Adaptive Web Design</h2>
+    <ul>
+      <li>
+        Adaptive design involves creating multiple fixed layouts for different
+        screen sizes.
+      </li>
+      <br />
+      <li>
+        Unlike responsive design, adaptive design doesn't rely on a single
+        changing layout but switches between different predefined layouts based
+        on the detected screen size.
+      </li>
+    </ul>
+    <br /><br />
+    <h1>Mobile First Approach</h1>
+    <hr />
+    <h2>1. min-width approach</h2>
+    <ul>
+      <li>
+        A lightweight version for mobile devices is created, and all styles for
+        wider screens are hidden inside the corresponding media queries.
+      </li>
+      <br />
+      <img width="500" src="./min-width.png" alt="" />
+    </ul>
+    <h2>2. min-width and max-width combination</h2>
+    <ul>
+      <li>
+        The use of only min-width means that the elements' lower indent will
+        need to be nullified for media query styles with min-width: 768px; and
+        for media query styles with min-width: 1024px, we will need to nullify
+        the frame styles.
+      </li>
+      <br />
+      <li>
+        In such situations, it's good practice to close specific styles in
+        certain intervals
+      </li>
+      <br />
+      <img width="500" src="./min-max-width.png" alt="" />
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Media Queries Example</title>
+    <style>
+      /* Default styles for all screen sizes */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #f0f0f0;
+        color: #333;
+      }
+
+      /* Media Query 1: Mobile Devices (max-width) */
+      @media only screen and (max-width: 767px) {
+        body {
+          background-color: #f7e8e8;
+          font-size: 16px;
+        }
+        h1 {
+          font-size: 24px;
+        }
+      }
+
+      /* Media Query 2: Tablets (min-width and max-width) */
+      @media only screen and (min-width: 768px) and (max-width: 1024px) {
+        body {
+          background-color: #f0f0f0;
+          font-size: 18px;
+        }
+        h1 {
+          font-size: 28px;
+        }
+      }
+
+      /* Media Query 3: Desktops (min-width) */
+      @media only screen and (min-width: 1025px) {
+        body {
+          background-color: #e2e2e2;
+          font-size: 20px;
+        }
+        h1 {
+          font-size: 36px;
+        }
+      }
+
+      /* Media Query 4: Landscape orientation */
+      @media only screen and (orientation: landscape) {
+        body {
+          background-color: #c4f5ca;
+        }
+      }
+
+      /* Media Query 5: Portrait orientation */
+      @media only screen and (orientation: portrait) {
+        body {
+          background-color: #f5d7c4;
+        }
+      }
+
+      /* Media Query 6: Print styles */
+      @media print {
+        body {
+          background-color: transparent;
+          font-size: 12pt;
+        }
+        h1 {
+          font-size: 20pt;
+        }
+      }
+
+      /* Media Query 7: NOT a certain feature (e.g., not a touchscreen) */
+      @media not (hover: none) {
+        body {
+          border: 1px solid #333;
+        }
+      }
+
+      /* Media Query 8: OR condition (min-width or landscape orientation) */
+      @media only screen and (min-width: 768px),
+        only screen and (orientation: landscape) {
+        h1 {
+          color: #ff6600;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Media Queries Example</h1>
+    <p>
+      This is an example of how to use media queries in CSS to create responsive
+      designs for various screen sizes and device conditions.
+    </p>
+  </body>
+</html>

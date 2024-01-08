@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Min-width Media Query Example</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+
+      h1 {
+        text-align: center;
+      }
+
+      .content {
+        background-color: lightblue;
+        padding: 20px;
+        border: 2px solid navy;
+      }
+
+      /* For tablets */
+      @media (min-width: 768px) {
+        .content {
+          background-color: lightgreen;
+          padding: 30px;
+        }
+      }
+
+      /* For desktops */
+      @media (min-width: 1024px) {
+        .content {
+          background-color: lightcoral;
+          border: 5px solid darkred;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="content">
+      <p>This is a content box.</p>
+    </div>
+    <br />
+    <hr />
+    <h2>The Problem:</h2>
+    <ul>
+      <li>
+        When the viewport is wider than 1024px, styles from both the 768px and
+        1024px media queries are applied. This means the .content div will have
+        the padding defined for tablets (30px) and the border defined for
+        desktops.
+      </li>
+      <br />
+      <li>
+        The styles are "cumulative" – unless explicitly overridden, styles from
+        narrower media queries are carried over to wider ones. This can lead to
+        unintended styling consequences and requires extra effort to "reset"
+        styles for each breakpoint.
+      </li>
+    </ul>
+  </body>
+</html>
