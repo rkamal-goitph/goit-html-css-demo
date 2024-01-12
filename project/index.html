@@ -72,7 +72,7 @@
             <use href="./images/icons.svg#hamburger-open"></use>
           </svg>
         </button>
-        <div class="menu-container js-menu-container is-open" id="mobile-menu">
+        <div class="menu-container js-menu-container" id="mobile-menu">
           <button class="menu-toggle hamburger-close-button js-close-menu">
             <svg class="menu-icon" width="32" height="32">
               <use href="./images/icons.svg#hamburger-close"></use>
@@ -229,10 +229,17 @@
             <li class="team-card">
               <img
                 class="team-card-image"
+                srcset="./assets/member-1x.jpg 1x, ./assets/member-2x.jpg"
                 src="./images/product-designer.jpg"
                 alt="Team Product Designer"
                 width="264"
               />
+
+              <picture>
+                <source srcset="./assets/member-1x.jpg 1x, ./assets/member-2x.jpg" type="image/jpg" />
+                <img src="./images/product-designer.jpg" alt="CAT" />
+              </picture>
+
               <div class="team-card-text">
                 <h4 class="team-name">Mark Guerrero</h4>
                 <p class="team-position">Product Designer</p>
